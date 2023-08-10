@@ -3,8 +3,11 @@
   <ul>
     <li v-for="li in list" :key="li.id">{{ li.id }} : {{li.name}}</li>
   </ul>
-  <input type="text" v-bind="">
-
+  <p>{{inputTxt}}</p>
+  <input 
+  type="text" 
+  :value="inputTxt" 
+  @change="inputTxt = $event.target.value">
 </template>
 <script>
 export default {
@@ -16,9 +19,18 @@ export default {
         { id: 0, name: '111' },
         { id: 0, name: '222' },
         { id: 0, name: '333' },
-      ]
+      ],
+      inputTxt: 'why'
     }
   },
+  watch: {
+    inputTxt() {
+      console.log(this.inputTxt)
+    }
+  },
+  computed: {
+    
+   },
   methods: {
     
   }
