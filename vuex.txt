@@ -1,0 +1,40 @@
+vuex?
+개발하는 앱의 모든 컴포넌트에 대한 중앙집중식 저장소 
+데이터를 store라는 파일을 통해 관리한다
+
+vuex의 핵심구성
+State, Mutations, Actions, Getters
+
+-state -> 프로젝트에서 공통으로 사용할 변수 정의
+= data(){}
+
+-mutations -> state를 변경시키는 역할
+비동기처리가 아닌 동기처리를 함
+commit('함수명','전달인자')로 실행 시킬 수 있음
+mutations내에 함수형태로 작성한다
+
+-actions -> Mutations를 실행시키는 역할
+*동기/비동기
+동기 : 하나의 작업이 끝날때까지 기다린다. 다른작업X
+비동기 : 동시에 여러작업을 처리한다.
+
+
+https://ux.stories.pe.kr/149
+
+https://velog.io/@daybreak/Javascript-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC
+
+
+-getter -> 각 Components의 계산된 속성의 공통 사용 정의
+=computed: {}
+
+
+
+
+
+
+
+
+
+
+
+
