@@ -7,7 +7,8 @@
   <input 
   type="text" 
   :value="inputTxt" 
-  @change="inputTxt = $event.target.value">
+  @change="inputTxt = $event.target.value"
+  @keydown="showEvent">
 </template>
 <script>
 export default {
@@ -20,7 +21,7 @@ export default {
         { id: 0, name: '222' },
         { id: 0, name: '333' },
       ],
-      inputTxt: 'why'
+      inputTxt: 'why',
     }
   },
   watch: {
@@ -32,7 +33,9 @@ export default {
     
    },
   methods: {
-    
+    showEvent(event) { 
+      console.log(event)
+    }
   }
 }
 </script>
